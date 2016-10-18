@@ -1,0 +1,33 @@
+Microsoft (R) Visual C# Compiler version 4.6.1586.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+warning CS2002: Source file 'DeploymentController.cs' specified multiple times
+warning CS2002: Source file 'DiscoveryController.cs' specified multiple times
+warning CS2002: Source file 'EndingGameController.cs' specified multiple times
+warning CS2002: Source file 'GameController.cs' specified multiple times
+warning CS2002: Source file 'GameLogic.cs' specified multiple times
+warning CS2002: Source file 'GameResources.cs' specified multiple times
+warning CS2002: Source file 'GameState.cs' specified multiple times
+warning CS2002: Source file 'HighScoreController.cs' specified multiple times
+warning CS2002: Source file 'MenuController.cs' specified multiple times
+warning CS2002: Source file 'UtilityFunctions.cs' specified multiple times
+warning CS2002: Source file 'AIHardPlayer.cs' specified multiple times
+warning CS2002: Source file 'AIMediumPlayer.cs' specified multiple times
+warning CS2002: Source file 'AIOption.cs' specified multiple times
+warning CS2002: Source file 'AIPlayer.cs' specified multiple times
+warning CS2002: Source file 'AttackResult.cs' specified multiple times
+warning CS2002: Source file 'BattleShipsGame.cs' specified multiple times
+warning CS2002: Source file 'Direction.cs' specified multiple times
+warning CS2002: Source file 'ISeaGrid.cs' specified multiple times
+warning CS2002: Source file 'Player.cs' specified multiple times
+warning CS2002: Source file 'ResultOfAttack.cs' specified multiple times
+warning CS2002: Source file 'SeaGrid.cs' specified multiple times
+warning CS2002: Source file 'SeaGridAdapter.cs' specified multiple times
+warning CS2002: Source file 'Ship.cs' specified multiple times
+warning CS2002: Source file 'ShipName.cs' specified multiple times
+warning CS2002: Source file 'Tile.cs' specified multiple times
+warning CS2002: Source file 'TileView.cs' specified multiple times
+error CS0006: Metadata file 'nunit.framework' could not be found
