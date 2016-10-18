@@ -1,6 +1,9 @@
+
+using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+// using System.Data;
 using System.Diagnostics;
 /// <summary>
 /// Player has its own _PlayerGrid, and can see an _EnemyGrid, it can also check if
@@ -9,23 +12,15 @@ using System.Diagnostics;
 public class Player : IEnumerable<Ship>
 {
 
-	private bool InstanceFieldsInitialized = false;
-
-	private void InitializeInstanceFields()
-	{
-		_Ships = new Dictionary<ShipName, Ship>();
-		_playerGrid = new SeaGrid(_Ships);
-	}
-
 	protected static Random _Random = new Random();
-
-	private Dictionary<ShipName, Ship> _Ships;
+	private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
 	private SeaGrid _playerGrid;
 	private ISeaGrid _enemyGrid;
-	protected BattleShipsGame _game;
 
+	protected BattleShipsGame _game;
 	private int _shots;
 	private int _hits;
+
 	private int _misses;
 	/// <summary>
 	/// Returns the game that the player is part of.
@@ -48,6 +43,7 @@ public class Player : IEnumerable<Ship>
 	public Player(BattleShipsGame controller)
 	{
 		_game = controller;
+    _playerGrid = new SeaGrid(_Ships);
 
 		//for each ship add the ships name so the seagrid knows about them
 		foreach (ShipName name in Enum.GetValues(typeof(ShipName))) {
@@ -93,12 +89,9 @@ public class Player : IEnumerable<Ship>
 	/// <value>The ship</value>
 	/// <returns>The ship with the indicated name</returns>
 	/// <remarks>The none ship returns nothing/null</remarks>
-	public Ship get_Ship(ShipName name)
-	{
+	public Ship Ship(ShipName name) {
 		if (name == ShipName.None)
-		{
 			return null;
-		}
 
 		return _Ships[name];
 	}
