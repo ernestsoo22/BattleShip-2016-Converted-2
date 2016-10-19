@@ -29,7 +29,9 @@ static class MenuController
 			"QUIT",
 			// Added Function: Change Music Function 
 			// Author: Ernest Soo 
-			"MUSIC"
+			"MUSIC",
+			// Added Function: Change Background(Credits) Function // Author: Jacky Ten
+			"CREDITS"
 		},
 		new string[] {
 			"RETURN",
@@ -48,6 +50,12 @@ static class MenuController
 			"BATTLE",
 			"DRUMS",
 			"MUTE"
+		},
+		// Added Function: Credits Option Function 
+		// Author: Jacky Ten 
+		new string[] {
+			"Credit1",
+			"Credit2",
 		}
 
 	};
@@ -66,6 +74,9 @@ static class MenuController
 	// Added Function: Change Music Function 
 	// Author: Ernest Soo 
 	private const int MUSIC_MENU = 3;
+	// Added Function: Change Background(Credit) Function 
+	// Author: Jacky Ten  
+	private const int B_MENU = 4;
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
 	private const int MAIN_MENU_SETUP_BUTTON = 1;
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
@@ -74,6 +85,9 @@ static class MenuController
 	// Added Function: Change Music Function 
 	// Author: Ernest Soo 
 	private const int MAIN_MENU_MUSIC_BUTTON = 4;
+	// Added Function: Credit Function 
+	// Author: Jacky Ten 
+	private const int MAIN_MENU_B_BUTTON = 5;
 	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
@@ -87,6 +101,11 @@ static class MenuController
 	private const int MUSIC_MENU_MUSIC3_BUTTON = 2;
 	private const int MUSIC_MENU_MUSIC4_BUTTON = 3;
 	private const int MUSIC_MENU_EXIT_BUTTON = 4;
+
+	// Added Function: Credit Function 
+	// Author: Jacky Ten
+	private const int B_MENU_B1 = 0;
+	private const int B_MENU_B2 = 1;
 
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
@@ -131,6 +150,19 @@ static class MenuController
 		}
 
 	}
+
+	// Added Function: Credit Function 
+	// Author: Jacky Ten
+	public static void HandleBackgroundMenuInput ()
+	{
+		bool handled = false;
+		handled = HandleMenuInput (B_MENU, 1, 4);
+
+		if (!handled) {
+			HandleMenuInput (B_MENU, 0, 0);
+		}
+	}
+
 
 	/// <summary>
 	/// Handle input in the game menu.
@@ -227,6 +259,14 @@ static class MenuController
 		DrawButtons (MUSIC_MENU, 1, 3);
 	}
 
+	// Added Function: Change Background Function // Author: Jacky Ten
+	public static void DrawBackground ()
+	{
+		DrawButtons (MAIN_MENU);
+		DrawButtons (B_MENU, 1, 4);
+	}
+
+
 	/// <summary>
 	/// Draw the buttons associated with a top level menu.
 	/// </summary>
@@ -312,6 +352,11 @@ static class MenuController
 			case MUSIC_MENU:
 			PerformChangeMusicAction (button);
 			break;
+			// Added Function: Change Background Function
+			// Author: Jacky Ten
+		case B_MENU:
+			PerformChangeBackgroundAction (button);
+			break;
 		}
 	}
 
@@ -335,6 +380,11 @@ static class MenuController
 			// Author: Ernest Soo 
 		    case MAIN_MENU_MUSIC_BUTTON:
 			GameController.AddNewState (GameState.AlteringMusic);
+			break;
+			// Added Function: Change Background Function 
+			// Author: Jacky Ten
+		case MAIN_MENU_B_BUTTON:
+			GameController.AddNewState (GameState.AlteringBackground);
 			break;
 			case MAIN_MENU_QUIT_BUTTON:
 			GameController.EndCurrentState();
@@ -417,6 +467,28 @@ static class MenuController
 		//Always end state - handles exit button as well
 		GameController.EndCurrentState ();
 	}
+
+	// Added Function: Change Background Function 
+	// Author: Jacky Ten 
+	/// <summary>
+	/// The music menu was clicked, perform the button's action.
+	/// </summary>
+	/// <param name="button">the button pressed</param>
+	public static void PerformChangeBackgroundAction (int button)
+	{
+		switch (button) {
+		case B_MENU_B1:
+			SwinGame.DrawBitmap (GameResources.GameImage ("Credit1"), 0, 0);
+			GameResources.ChangeBackground0 ();
+			break;
+		case B_MENU_B2:
+			SwinGame.DrawBitmap (GameResources.GameImage ("Credit2"), 0, 0);
+			GameResources.ChangeBackground1 ();
+			break;
+		}
+
+	}
+
 }
 
 //=======================================================

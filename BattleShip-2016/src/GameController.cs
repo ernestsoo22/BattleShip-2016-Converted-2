@@ -286,6 +286,11 @@ public static class GameController
 			case GameState.AlteringMusic:
 			MenuController.HandleMusicMenuInput ();
 			    break;
+			// Added Function: Change Background Function 
+			// Author: Jacky
+		case GameState.AlteringBackground:
+			MenuController.HandleBackgroundMenuInput ();
+			break;
 			case GameState.Deploying:
 				DeploymentController.HandleDeploymentInput();
 				break;
@@ -328,6 +333,10 @@ public static class GameController
 			case GameState.AlteringMusic:
 			MenuController.DrawMusic ();
 			break;
+			// Added Function: Change Background Function // Author: Jacky Ten 
+		case GameState.AlteringBackground:
+			MenuController.DrawBackground ();
+			break;	
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
 				break;

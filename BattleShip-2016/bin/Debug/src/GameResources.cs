@@ -19,6 +19,10 @@ public static class GameResources
 
 	private static void LoadImages()
 	{
+		//Background Implemented Author:Jacky Ten
+		NewImage ("Credit1", "Credits1.jpg");
+		NewImage ("Credit2", "Credit2.jpg");
+
 		//Backgrounds
 		NewImage("Menu", "main_page.jpg");
 		NewImage("Discovery", "discover.jpg");
@@ -113,6 +117,9 @@ public static class GameResources
 	private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect>();
 
 	private static Dictionary<string, Music> _Music = new Dictionary<string, Music>();
+	private static Bitmap Credit1; //newly added, Author:Jacky Ten
+	private static Bitmap Credit2;//newly added, Author:Jacky Ten
+
 	private static Bitmap _Background;
 	private static Bitmap _Animation;
 	private static Bitmap _LoaderFull;
@@ -174,6 +181,29 @@ public static class GameResources
 		_LoaderEmpty = SwinGame.LoadBitmap(SwinGame.PathToResource("loader_empty.png", ResourceKind.BitmapResource));
 
 		PlaySwinGameIntro();
+	}
+
+	//New added, Author:Jacky
+	public static void ChangeBackground0()
+	{
+		Credit1 = SwinGame.LoadBitmap (SwinGame.PathToResource ("Credits1.jpg", ResourceKind.BitmapResource));
+		SwinGame.DrawBitmap (Credit1, 0, 0);
+
+		SwinGame.RefreshScreen ();
+		SwinGame.Delay (3500);
+		SwinGame.ProcessEvents ();
+
+	}
+	//New added, Author:Jacky
+	public static void ChangeBackground1()
+	{
+		Credit2 = SwinGame.LoadBitmap (SwinGame.PathToResource ("Credit2.jpg", ResourceKind.BitmapResource));
+		SwinGame.DrawBitmap (Credit2, 0, 0);
+
+		SwinGame.RefreshScreen ();
+		SwinGame.Delay (3500);
+		SwinGame.ProcessEvents ();
+
 	}
 
 	private static void PlaySwinGameIntro()

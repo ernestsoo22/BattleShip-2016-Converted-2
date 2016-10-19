@@ -238,6 +238,11 @@ static class UtilityFunctions
 			case GameState.AlteringMusic:
 			SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
 				break;
+			// Added Function: Change Background Function 
+			// Author:Jacky Ten
+		case GameState.AlteringBackground:
+			SwinGame.DrawBitmap (GameResources.GameImage ("Menu"), 0, 0);
+			break;
 			case GameState.Discovering:
 			case GameState.EndingGame:
 				SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);

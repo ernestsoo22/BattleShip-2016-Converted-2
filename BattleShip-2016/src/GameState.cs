@@ -32,6 +32,9 @@ public enum GameState
 	/// </summary>
 	AlteringSettings,
 
+	//Author:Jacky
+	AlteringBackground,
+
 	/// <summary>
 	/// Players are deploying their ships
 	/// </summary>
