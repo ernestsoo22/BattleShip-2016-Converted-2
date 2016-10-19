@@ -233,6 +233,9 @@ static class UtilityFunctions
 			case GameState.ViewingGameMenu:
 			case GameState.AlteringSettings:
 			case GameState.ViewingHighScores:
+			// Added Function: Change Music Function 
+			// Author: Ernest Soo 
+			case GameState.AlteringMusic:
 			SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
 				break;
 			case GameState.Discovering:

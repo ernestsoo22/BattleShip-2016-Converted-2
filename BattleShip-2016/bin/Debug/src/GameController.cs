@@ -281,6 +281,11 @@ public static class GameController
 			case GameState.AlteringSettings:
 			MenuController.HandleSetupMenuInput();
 				break;
+			// Added Function: Change Music Function 
+		    // Author: Ernest Soo
+			case GameState.AlteringMusic:
+			MenuController.HandleMusicMenuInput ();
+			    break;
 			case GameState.Deploying:
 				DeploymentController.HandleDeploymentInput();
 				break;
@@ -318,6 +323,11 @@ public static class GameController
 			case GameState.AlteringSettings:
 			MenuController.DrawSettings();
 				break;
+			// Added Function: Change Music Function 
+			// Author: Ernest Soo 
+			case GameState.AlteringMusic:
+			MenuController.DrawMusic ();
+			break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
 				break;

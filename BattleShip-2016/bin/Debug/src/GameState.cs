@@ -47,6 +47,13 @@ public enum GameState
 	/// </summary>
 	EndingGame,
 
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	/// <summary>
+	/// The player is altering the music settings
+	/// </summary>
+	AlteringMusic,
+
 	/// <summary>
 	/// The player has quit. Show ending credits and terminate the game
 	/// </summary>

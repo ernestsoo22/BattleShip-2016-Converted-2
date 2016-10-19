@@ -26,7 +26,10 @@ static class MenuController
 			"PLAY",
 			"SETUP",
 			"SCORES",
-			"QUIT"
+			"QUIT",
+			// Added Function: Change Music Function 
+			// Author: Ernest Soo 
+			"MUSIC"
 		},
 		new string[] {
 			"RETURN",
@@ -37,6 +40,14 @@ static class MenuController
 			"EASY",
 			"MEDIUM",
 			"HARD"
+		},
+		// Added Function: Change Music Function 
+		// Author: Ernest Soo 
+		new string[] {
+			"HORROR",
+			"BATTLE",
+			"DRUMS",
+			"MUTE"
 		}
 
 	};
@@ -52,16 +63,31 @@ static class MenuController
 	private const int GAME_MENU = 1;
 
 	private const int SETUP_MENU = 2;
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	private const int MUSIC_MENU = 3;
 	private const int MAIN_MENU_PLAY_BUTTON = 0;
 	private const int MAIN_MENU_SETUP_BUTTON = 1;
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 
 	private const int MAIN_MENU_QUIT_BUTTON = 3;
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	private const int MAIN_MENU_MUSIC_BUTTON = 4;
 	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
 
 	private const int SETUP_MENU_EXIT_BUTTON = 3;
+
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	private const int MUSIC_MENU_MUSIC1_BUTTON = 0;
+	private const int MUSIC_MENU_MUSIC2_BUTTON = 1;
+	private const int MUSIC_MENU_MUSIC3_BUTTON = 2;
+	private const int MUSIC_MENU_MUSIC4_BUTTON = 3;
+	private const int MUSIC_MENU_EXIT_BUTTON = 4;
+
 	private const int GAME_MENU_RETURN_BUTTON = 0;
 	private const int GAME_MENU_SURRENDER_BUTTON = 1;
 
@@ -88,6 +114,22 @@ static class MenuController
 		if (!handled) {
 			HandleMenuInput(MAIN_MENU, 0, 0);
 		}
+	}
+
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo
+	/// <summary>
+	/// Handles the processing of user input when the main menu is showing
+	/// </summary>
+	public static void HandleMusicMenuInput ()
+	{
+		bool handled = false;
+		handled = HandleMenuInput (MUSIC_MENU, 1, 3);
+
+		if (!handled) {
+			HandleMenuInput (MAIN_MENU, 0, 0);
+		}
+
 	}
 
 	/// <summary>
@@ -171,6 +213,20 @@ static class MenuController
 		DrawButtons(SETUP_MENU, 1, 1);
 	}
 
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	/// <summary>
+	/// Draws the music menu to the screen.
+	/// </summary>
+	/// <remarks>
+	/// Also shows the main menu
+	/// </remarks>
+	public static void DrawMusic ()
+	{
+		DrawButtons (MAIN_MENU);
+		DrawButtons (MUSIC_MENU, 1, 3);
+	}
+
 	/// <summary>
 	/// Draw the buttons associated with a top level menu.
 	/// </summary>
@@ -251,6 +307,11 @@ static class MenuController
 			case GAME_MENU:
 				PerformGameMenuAction(button);
 				break;
+			// Added Function: Change Music Function 
+			// Author: Ernest Soo 
+			case MUSIC_MENU:
+			PerformChangeMusicAction (button);
+			break;
 		}
 	}
 
@@ -270,10 +331,19 @@ static class MenuController
 			case MAIN_MENU_TOP_SCORES_BUTTON:
 			GameController.AddNewState(GameState.ViewingHighScores);
 				break;
+			// Added Function: Change Music Function 
+			// Author: Ernest Soo 
+		    case MAIN_MENU_MUSIC_BUTTON:
+			GameController.AddNewState (GameState.AlteringMusic);
+			break;
 			case MAIN_MENU_QUIT_BUTTON:
 			GameController.EndCurrentState();
 				break;
-		}
+
+
+
+		    }
+
 	}
 
 	/// <summary>
@@ -317,6 +387,35 @@ static class MenuController
 			GameController.AddNewState(GameState.Quitting);
 				break;
 		}
+
+	}
+
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	/// <summary>
+	/// The music menu was clicked, perform the button's action.
+	/// </summary>
+	/// <param name="button">the button pressed</param>
+	private static void PerformChangeMusicAction (int button)
+	{
+		switch (button) {
+		case MUSIC_MENU_MUSIC1_BUTTON:
+			SwinGame.PlayMusic ("Horrordrone.mp3");
+			break;
+		case MUSIC_MENU_MUSIC2_BUTTON:
+			SwinGame.PlayMusic ("Battle.mp3");
+			break;
+		case MUSIC_MENU_MUSIC3_BUTTON:
+			SwinGame.PlayMusic ("Drums.mp3");
+			break;
+		case MUSIC_MENU_MUSIC4_BUTTON:
+			SwinGame.StopMusic ();
+			break;
+
+		}
+
+		//Always end state - handles exit button as well
+		GameController.EndCurrentState ();
 	}
 }
 

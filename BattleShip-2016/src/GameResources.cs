@@ -53,6 +53,10 @@ public static class GameResources
 		NewSound("Miss", "watershot.wav");
 		NewSound("Winner", "winner.wav");
 		NewSound("Lose", "lose.wav");
+		// Added Function: Change Music Function 
+		// Author: Ernest Soo 
+		NewSound ("Option1", "Drums.mp3");
+		NewSound ("Option2", "Battle.mp3");
 	}
 
 	private static void LoadMusic()
