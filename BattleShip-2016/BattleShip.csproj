@@ -349,5 +349,6 @@
     <Compile Include="src\Model\TileView.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="StopWatch.cs" />
   </ItemGroup>
 </Project>

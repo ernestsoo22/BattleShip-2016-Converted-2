@@ -429,6 +429,8 @@ static class MenuController
 				break;
 			case GAME_MENU_SURRENDER_BUTTON:
 			GameController.EndCurrentState();
+			StopWatch.stopWatch.Stop ();
+			StopWatch.stopWatch.Reset ();
 				//end game menu
 			GameController.EndCurrentState();
 				//end game
