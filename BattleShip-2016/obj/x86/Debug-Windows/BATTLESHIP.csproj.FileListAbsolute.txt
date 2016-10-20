@@ -354,3 +354,9 @@ C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\obj\x86\Debug-Windows\BA
 C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credit2.jpg
 C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credits1.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\sounds\Battle.mp3
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\sounds\Drums.mp3
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credit2.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credits1.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\YOULOSE.gif
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\YOUWIN.gif

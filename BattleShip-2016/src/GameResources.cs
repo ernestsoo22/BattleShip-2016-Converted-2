@@ -19,6 +19,11 @@ public static class GameResources
 
 	private static void LoadImages()
 	{
+		//End Result Author: Bong
+		NewImage ("Win", "YOUWIN.gif");
+		NewImage ("Lose", "YOULOSE.gif");
+
+
 		//Background Implemented Author:Jacky Ten
 		NewImage ("Credit1", "Credits1.jpg");
 		NewImage ("Credit2", "Credit2.jpg");
@@ -121,6 +126,8 @@ public static class GameResources
 	private static Bitmap Credit2;//newly added, Author:Jacky Ten
 
 	private static Bitmap _Background;
+	private static Bitmap _Win;//newly added by Bong
+	private static Bitmap _Lose;//newly added by Bong
 	private static Bitmap _Animation;
 	private static Bitmap _LoaderFull;
 	private static Bitmap _LoaderEmpty;
@@ -182,6 +189,26 @@ public static class GameResources
 
 		PlaySwinGameIntro();
 	}
+
+	//Newly added by Bong
+	public static void ShowLose()
+	{
+		_Lose = SwinGame.LoadBitmap(SwinGame.PathToResource("YOULOSE.gif", ResourceKind.BitmapResource));
+		SwinGame.DrawBitmap(_Background, 0, 0);
+
+		SwinGame.RefreshScreen();
+		SwinGame.ProcessEvents();
+	}
+
+	public static void ShowWin()
+	{
+		_Win = SwinGame.LoadBitmap(SwinGame.PathToResource("YOUWIN.gif", ResourceKind.BitmapResource));
+		SwinGame.DrawBitmap(_Background, 0, 0);
+
+		SwinGame.RefreshScreen();
+		SwinGame.ProcessEvents();
+	}
+
 
 	//New added, Author:Jacky
 	public static void ChangeBackground0()
