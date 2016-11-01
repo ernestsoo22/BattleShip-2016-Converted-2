@@ -12,6 +12,9 @@ static class GameLogic
 		//Opens a new Graphics Window
 		SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 
+		//Maximize the game screen to full screen. Author:Jacky Ten
+		SwinGame.ToggleFullScreen ();
+
 		//Load Resources
 		GameResources.LoadResources();
 
