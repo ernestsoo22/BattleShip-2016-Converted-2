@@ -1,7 +1,3 @@
-
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 /// <summary>
@@ -26,6 +22,13 @@ public enum GameState
 	/// The player is looking at the high scores
 	/// </summary>
 	ViewingHighScores,
+
+	// Added Function: Change Music Function 
+	// Author: Ernest Soo 
+	/// <summary>
+	/// The player is using help menu
+	/// </summary>
+	ViewingHelp,
 
 	/// <summary>
 	/// The player is altering the game settings
@@ -56,6 +59,12 @@ public enum GameState
 	/// The player is altering the music settings
 	/// </summary>
 	AlteringMusic,
+
+
+
+
+
+
 
 	/// <summary>
 	/// The player has quit. Show ending credits and terminate the game

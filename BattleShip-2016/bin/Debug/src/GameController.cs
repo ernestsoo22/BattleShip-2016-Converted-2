@@ -291,6 +291,11 @@ public static class GameController
 		case GameState.AlteringBackground:
 			MenuController.HandleBackgroundMenuInput ();
 			break;
+			// Added Function: Help Function 
+		    // Author: Ernest Soo
+			case GameState.ViewingHelp:
+			MenuController.HandleHelpMenuInput ();
+			break;
 			case GameState.Deploying:
 				DeploymentController.HandleDeploymentInput();
 				break;
@@ -336,7 +341,8 @@ public static class GameController
 			// Added Function: Change Background Function // Author: Jacky Ten 
 		case GameState.AlteringBackground:
 			MenuController.DrawBackground ();
-			break;	
+			break;
+		
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
 				break;
