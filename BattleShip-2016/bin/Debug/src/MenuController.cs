@@ -549,32 +549,6 @@ static class MenuController
 
 	}
 
-	// Added Function: Help Function 
-	// Author: Ernest Soo 
-	/// <summary>
-	/// The help menu was clicked, perform the button's action.
-	/// </summary>
-	/// <param name="button">the button pressed</param>
-	/*	public static void PerformHelpAction (int button)
-		{
-			switch (button) {
-			case HELP_MENU_PREPARE_BUTTON:
 
-				GameController.EndCurrentState ();
-				GameController.AddNewState (GameState.help1);
-
-
-				break;
-			case HELP_MENU_BATTLE_BUTTON:
-
-				GameResources.HowBattleDisplay ();
-
-				break;
-			}
-
-			GameController.EndCurrentState ();
-
-
-		}*/
 
 }

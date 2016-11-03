@@ -541,3 +541,4 @@ C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfc.nlp
 C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfd.nlp
 C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfkc.nlp
 C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfkd.nlp
+C:\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\HowToPlay.png

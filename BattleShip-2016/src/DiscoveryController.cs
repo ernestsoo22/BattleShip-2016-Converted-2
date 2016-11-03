@@ -62,6 +62,7 @@ static class DiscoveryController
 		const int HITS_TOP = 206;
 		const int SPLASH_TOP = 256;
 		const int TIME_TOP = 296;
+		const int TIME_LEFT = 152;
 
 		if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c)) {
 			UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
@@ -75,7 +76,7 @@ static class DiscoveryController
 		SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
 		SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
-		SwinGame.DrawText (StopWatch.TimeTaken("elapsedTime"), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, TIME_TOP);
+		SwinGame.DrawText (StopWatch.TimeTaken("elapsedTime"), Color.LightGreen, GameResources.GameFont("Menu"), TIME_LEFT, TIME_TOP);
 	}
 
 }
