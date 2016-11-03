@@ -542,3 +542,11 @@ C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfd.nlp
 C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfkc.nlp
 C:\newnew\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\normnfkd.nlp
 C:\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\HowToPlay.png
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\sounds\Battle.mp3
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\sounds\Drums.mp3
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credit2.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\Credits1.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\HowToPlay.png
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdeploy.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdiscover.jpg
+C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newnewmenu.jpg

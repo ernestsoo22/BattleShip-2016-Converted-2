@@ -29,9 +29,9 @@ public static class GameResources
 		NewImage ("HowToPlay", "HowToPlay.png");
 
 		//Backgrounds
-		NewImage ("Menu", "main_page.jpg");
-		NewImage ("Discovery", "discover.jpg");
-		NewImage ("Deploy", "deploy.jpg");
+		NewImage ("Menu", "newnewmenu.jpg");
+		NewImage ("Discovery", "newdiscover.jpg");
+		NewImage ("Deploy", "newdeploy.jpg");
 
 		//Deployment
 		NewImage ("LeftRightButton", "deploy_dir_button_horiz.png");
