@@ -550,3 +550,7 @@ C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resou
 C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdeploy.jpg
 C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdiscover.jpg
 C:\Users\Brandonbong\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newnewmenu.jpg
+C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\HowToPlay.png
+C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdeploy.jpg
+C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newdiscover.jpg
+C:\Users\HP\BattleShip-2016-Converted-2\BattleShip-2016\bin\Debug\Resources\images\newnewmenu.jpg

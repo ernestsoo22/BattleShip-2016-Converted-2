@@ -137,6 +137,19 @@ static class MenuController
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>
+
+
+	public static int CREDIT1 {
+		get {
+			return B_MENU_B1;
+		}
+	}
+	public static int CREDIT2 {
+		get {
+			return B_MENU_B2;
+		}
+	}
+
 	public static void HandleMainMenuInput ()
 	{
 		HandleMenuInput (MAIN_MENU, 0, 0);
